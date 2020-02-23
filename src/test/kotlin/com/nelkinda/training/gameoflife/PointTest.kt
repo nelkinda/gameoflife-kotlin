@@ -27,6 +27,6 @@ internal class PointTest {
     @Test
     fun neighbors() = assertEquals(
             setOf(P(4, 4), P(4, 5), P(4, 6), P(5, 4), P(5, 6), P(6, 4), P(6, 5), P(6, 6)),
-            P(5, 5).neighbors()
+            P(5, 5).neighbors().toSet()
     )
 }

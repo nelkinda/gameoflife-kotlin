@@ -2,24 +2,19 @@ package com.nelkinda.training.gameoflife
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertAll
-import java.util.stream.IntStream.range
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 
 internal class RulesTest {
     private fun assertSurvival(rules: Rules, liveNeighbors: Set<Int>) = assertAll(
-            range(0, 8).mapToObj { neighbors: Int ->
-                {
-                    assertEquals(neighbors in liveNeighbors, rules.survives(neighbors))
-                }
+            (0..8).map {
+                { assertEquals(it in liveNeighbors, rules.survives(it)) }
             }
     )
 
     private fun assertBirth(rules: Rules, liveNeighbors: Set<Int>) = assertAll(
-            range(0, 8).mapToObj { neighbors: Int ->
-                {
-                    assertEquals(neighbors in liveNeighbors, rules.born(neighbors))
-                }
+            (0..8).map {
+                { assertEquals(it in liveNeighbors, rules.born(it)) }
             }
     )
 
