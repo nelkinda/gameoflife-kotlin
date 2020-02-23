@@ -15,7 +15,7 @@ internal data class StandardRules(
         private val liveNeighborsForSurvival: Set<Int>,
         private val liveNeighborsForBirth: Set<Int>
 ) : Rules {
-    override fun survives(liveNeighbors: Int) = liveNeighborsForSurvival.contains(liveNeighbors)
-    override fun born(liveNeighbors: Int) = liveNeighborsForBirth.contains(liveNeighbors)
+    override fun survives(liveNeighbors: Int) = liveNeighbors in liveNeighborsForSurvival
+    override fun born(liveNeighbors: Int) = liveNeighbors in liveNeighborsForBirth
     override fun toString() = "R " + toString(liveNeighborsForSurvival) + "/" + toString(liveNeighborsForBirth)
 }

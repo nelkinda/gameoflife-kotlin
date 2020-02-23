@@ -14,7 +14,7 @@ class GameOfLifeSteps {
 
     @Then("the next generation MUST be:")
     fun assertNextGenerationEquals(spec: String) {
-        universe = universe.next()
+        ++universe
         assertEquals(parse(spec), universe)
     }
 }

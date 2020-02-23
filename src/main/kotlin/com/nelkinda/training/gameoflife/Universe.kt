@@ -6,7 +6,7 @@ internal data class Universe constructor(
 ) {
     internal constructor(life: Set<Point>) : this(ConwayRules, life)
 
-    operator fun next() = Universe(rules, survivingCells() + bornCells())
+    operator fun inc() = Universe(rules, survivingCells() + bornCells())
 
     private fun survivingCells() = life.filter { it.survives() }.toSet()
     private fun bornCells() = life
@@ -14,7 +14,7 @@ internal data class Universe constructor(
             .filter { it.born() }
             .toSet()
 
-    private fun Point.isAlive() = life.contains(this)
+    private fun Point.isAlive() = this in life
     private fun Point.survives() = rules.survives(countLiveNeighbors())
     private fun Point.born() = rules.born(countLiveNeighbors())
     private fun Point.deadNeighbors() = neighbors { !it.isAlive() }

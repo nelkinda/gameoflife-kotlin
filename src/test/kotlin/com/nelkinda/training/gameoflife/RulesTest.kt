@@ -7,31 +7,28 @@ import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 
 internal class RulesTest {
-    private fun assertSurvival(rules: Rules, liveNeighbors: Set<Int>) =
-            assertAll(
-                    range(0, 8).mapToObj { neighbors: Int ->
-                        {
-                            assertEquals(liveNeighbors.contains(neighbors), rules.survives(neighbors))
-                        }
-                    }
-            )
+    private fun assertSurvival(rules: Rules, liveNeighbors: Set<Int>) = assertAll(
+            range(0, 8).mapToObj { neighbors: Int ->
+                {
+                    assertEquals(neighbors in liveNeighbors, rules.survives(neighbors))
+                }
+            }
+    )
 
-    private fun assertBirth(rules: Rules, liveNeighbors: Set<Int>) =
-            assertAll(
-                    range(0, 8).mapToObj { neighbors: Int ->
-                        {
-                            assertEquals(liveNeighbors.contains(neighbors), rules.born(neighbors))
-                        }
-                    }
-            )
+    private fun assertBirth(rules: Rules, liveNeighbors: Set<Int>) = assertAll(
+            range(0, 8).mapToObj { neighbors: Int ->
+                {
+                    assertEquals(neighbors in liveNeighbors, rules.born(neighbors))
+                }
+            }
+    )
 
     @Test
-    fun testConwayRules() =
-            assertAll(
-                    { assertEquals("R 23/3", ConwayRules.toString()) },
-                    { assertSurvival(ConwayRules, setOf(2, 3)) },
-                    { assertBirth(ConwayRules, setOf(3)) }
-            )
+    fun testConwayRules() = assertAll(
+            { assertEquals("R 23/3", ConwayRules.toString()) },
+            { assertSurvival(ConwayRules, setOf(2, 3)) },
+            { assertBirth(ConwayRules, setOf(3)) }
+    )
 
     @Test
     fun equality() {
