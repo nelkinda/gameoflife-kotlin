@@ -27,13 +27,12 @@ This implementation of Game of Life follows the following activities and constra
 * Immutable objects only.
   Only pure functions.
 * No variable reassignments (except for the Parser).
-* Started: No naked primitives, not followed through yet.
 * Short functions only.
-  Most functions are one line only.
-  Exception: Some constructors are 2 lines, the Parser is big.
+  Most functions are expression functions.
+  Exception: The Parser is big.
 * Domain-Specific Language:
   The symbol names are taken from the problem domain.
-  A point, for example, is constructed with `P(x, y)` instead of `new Point(x, y)`.
+  A point, for example, is constructed with `P(x, y)` instead of `Point(x, y)`.
   That makes the code shorter and easier to read.
 * Functional Core, Imperative Shell:
   The code is purely functional.
@@ -41,6 +40,8 @@ This implementation of Game of Life follows the following activities and constra
   The Parser implementation is imperative, but its interface and observable behavior are functional.
 
 ## Quality
+Note: This has been copied from [gameoflife-java](https://github.com/nelkinda/gameoflife-java) and not changed to Kotlin yet.
+Jacoco and Pitest do not work yet.
 
 ### Testing, Mutation Test Coverage
 - The acceptance tests are written using BDD in Gherkin and executed via Cucumber.
