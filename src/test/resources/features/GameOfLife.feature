@@ -25,7 +25,7 @@ Feature: Conway's Game of Life
   Scenario: Single cell universe
     Given the following universe:
     """
-    x
+    *
     """
     Then the next generation MUST be:
     """
@@ -34,67 +34,67 @@ Feature: Conway's Game of Life
   Scenario: Block
     Given the following universe:
     """
-    xx
-    xx
+    **
+    **
     """
     Then the next generation MUST be:
     """
-    xx
-    xx
+    **
+    **
     """
 
   Scenario: Blinker
     Given the following universe:
     """
-    .x
-    .x
-    .x
+    .*
+    .*
+    .*
     """
     Then the next generation MUST be:
     """
 
-    xxx
+    ***
 
     """
     Then the next generation MUST be:
     """
-    .x
-    .x
-    .x
+    .*
+    .*
+    .*
     """
 
   Scenario: Glider
     Given the following universe:
     """
-    .x
-    ..x
-    xxx
+    .*
+    ..*
+    ***
     """
     Then the next generation MUST be:
     """
 
-    x.x
-    .xx
-    .x
+    *.*
+    .**
+    .*
     """
     Then the next generation MUST be:
     """
 
-    ..x
-    x.x
-    .xx
+    ..*
+    *.*
+    .**
     """
     Then the next generation MUST be:
     """
 
-    .x
-    ..xx
-    .xx
+    .*
+    ..**
+    .**
     """
     Then the next generation MUST be:
     """
 
-    ..x
-    ...x
-    .xxx
+    ..*
+    ...*
+    .***
     """

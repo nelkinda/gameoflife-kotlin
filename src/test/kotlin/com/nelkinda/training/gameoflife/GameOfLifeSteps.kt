@@ -9,12 +9,12 @@ class GameOfLifeSteps {
 
     @Given("the following universe:")
     fun defineUniverse(spec: String) {
-        universe = parse(spec)
+        universe = `parse simplified Life 1_05 format`(spec)
     }
 
     @Then("the next generation MUST be:")
     fun assertNextGenerationEquals(spec: String) {
         ++universe
-        assertEquals(parse(spec), universe)
+        assertEquals(`parse simplified Life 1_05 format`(spec), universe)
     }
 }

@@ -9,10 +9,10 @@ internal class ParserTest {
     @Test
     fun test() = assertAll(
             { parses("") },
-            { parses("x", P(0, 0)) },
-            { parses("xx", P(0, 0), P(1, 0)) },
-            { parses("x\nx", P(0, 0), P(0, 1)) },
-            { parses("x.x", P(0, 0), P(2, 0)) },
+            { parses("*", P(0, 0)) },
+            { parses("**", P(0, 0), P(1, 0)) },
+            { parses("*\n*", P(0, 0), P(0, 1)) },
+            { parses("*.*", P(0, 0), P(2, 0)) },
             { assertThrows<IllegalArgumentException> { parses("o") } }
     )
 
