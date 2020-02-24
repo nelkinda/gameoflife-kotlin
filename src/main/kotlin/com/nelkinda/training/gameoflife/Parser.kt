@@ -1,7 +1,7 @@
 package com.nelkinda.training.gameoflife
 
 internal fun parse(s: String): Universe {
-    val cells = HashSet<Point>()
+    val cells = HashSet<Cell>()
     var line = 0
     var column = 0
     for (c in s) {

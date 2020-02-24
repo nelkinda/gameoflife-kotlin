@@ -1,23 +1,23 @@
 package com.nelkinda.training.gameoflife
 
+internal typealias Cell = Point
+
 internal data class Universe constructor(
         private val rules: Rules = ConwayRules,
-        private val life: Set<Point>
+        private val life: Set<Cell>
 ) {
     operator fun inc() = Universe(rules, survivingCells() + bornCells())
 
     private fun survivingCells() = life.filter { it.survives() }.toSet()
-    private fun bornCells() = life
-            .flatMap { it.deadNeighbors() }
-            .filter { it.born() }
-            .toSet()
+    private fun deadNeighborsOfAliveCells() = life.flatMap { it.deadNeighbors() }
+    private fun bornCells() = deadNeighborsOfAliveCells().filter { it.born() }.toSet()
 
-    private fun Point.isAlive() = this in life
-    private fun Point.survives() = rules.survives(countLiveNeighbors())
-    private fun Point.born() = rules.born(countLiveNeighbors())
-    private fun Point.deadNeighbors() = neighbors { !it.isAlive() }
-    private fun Point.liveNeighbors() = neighbors { it.isAlive() }
-    private fun Point.countLiveNeighbors() = liveNeighbors().count()
+    private fun Cell.isAlive() = this in life
+    private fun Cell.survives() = rules.survives(countLiveNeighbors())
+    private fun Cell.born() = rules.born(countLiveNeighbors())
+    private fun Cell.deadNeighbors() = neighbors { !it.isAlive() }
+    private fun Cell.liveNeighbors() = neighbors { it.isAlive() }
+    private fun Cell.countLiveNeighbors() = liveNeighbors().count()
 
     override fun toString() = "Universe{$rules\n$life}"
 }
