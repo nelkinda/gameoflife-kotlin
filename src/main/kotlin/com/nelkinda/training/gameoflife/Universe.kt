@@ -1,11 +1,9 @@
 package com.nelkinda.training.gameoflife
 
 internal data class Universe constructor(
-        private val rules: Rules,
+        private val rules: Rules = ConwayRules,
         private val life: Set<Point>
 ) {
-    internal constructor(life: Set<Point>) : this(ConwayRules, life)
-
     operator fun inc() = Universe(rules, survivingCells() + bornCells())
 
     private fun survivingCells() = life.filter { it.survives() }.toSet()

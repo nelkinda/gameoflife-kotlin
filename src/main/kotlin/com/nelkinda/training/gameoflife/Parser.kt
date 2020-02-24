@@ -18,5 +18,5 @@ internal fun parse(s: String): Universe {
             else -> throw IllegalArgumentException("Unexpected character '$c' at line $line, column $column")
         }
     }
-    return Universe(cells.toSet())
+    return Universe(life = cells.toSet())
 }

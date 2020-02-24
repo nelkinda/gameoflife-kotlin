@@ -16,5 +16,5 @@ internal class ParserTest {
             { assertThrows<IllegalArgumentException> { parses("o") } }
     )
 
-    private fun parses(spec: String, vararg cells: Point) = assertEquals(Universe(setOf(*cells)), parse(spec))
+    private fun parses(spec: String, vararg cells: Point) = assertEquals(Universe(life = setOf(*cells)), parse(spec))
 }

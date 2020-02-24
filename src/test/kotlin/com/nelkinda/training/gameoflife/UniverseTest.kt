@@ -22,5 +22,5 @@ internal class UniverseTest {
     }
 
     @Test
-    fun testToString() = assertEquals("Universe{R 23/3\n[P(0, 1)]}", Universe(setOf(P(0, 1))).toString())
+    fun testToString() = assertEquals("Universe{R 23/3\n[P(0, 1)]}", Universe(life = setOf(P(0, 1))).toString())
 }
