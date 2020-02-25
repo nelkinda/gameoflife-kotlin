@@ -1,6 +1,6 @@
 package com.nelkinda.training.gameoflife
 
-internal fun `parse simplified Life 1_05 format`(s: String): Universe {
+internal fun `parse simplified Life 1_05`(s: String): Universe {
     val cells = HashSet<Cell>()
     var line = 0
     var column = 0
