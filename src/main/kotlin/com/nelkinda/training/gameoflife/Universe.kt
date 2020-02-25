@@ -9,8 +9,8 @@ internal data class Universe constructor(
     operator fun inc() = Universe(rules, survivingCells() + bornCells())
 
     private fun survivingCells() = life.filter { it.survives() }.toSet()
-    private fun deadNeighborsOfAliveCells() = life.flatMap { it.deadNeighbors() }
-    private fun bornCells() = deadNeighborsOfAliveCells().filter { it.born() }.toSet()
+    private fun deadNeighborsOfLivingCells() = life.flatMap { it.deadNeighbors() }
+    private fun bornCells() = deadNeighborsOfLivingCells().filter { it.born() }.toSet()
 
     private fun Cell.isAlive() = this in life
     private fun Cell.survives() = rules.survives(countLiveNeighbors())
