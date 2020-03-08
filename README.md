@@ -1,5 +1,7 @@
 # Game of Life
 
+![Java CI with Maven](https://github.com/nelkinda/gameoflife-kotlin/workflows/Java%20CI%20with%20Maven/badge.svg)
+
 This is an example implementation of Conway's Game of Life in Kotlin.
 The primary focus of the implementation is cleanliness, not performance.
 It serves as a lose guideline for Nelkinda Coderetreat facilitators.
