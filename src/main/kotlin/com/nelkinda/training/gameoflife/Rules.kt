@@ -7,15 +7,12 @@ interface Rules {
     fun born(liveNeighbors: Int): Boolean
 }
 
-private fun toString(set: Set<Int>) = set
-        .sorted()
-        .joinToString("") { obj: Int -> obj.toString() }
-
 internal data class StandardRules(
         private val liveNeighborsForSurvival: Set<Int>,
         private val liveNeighborsForBirth: Set<Int>
 ) : Rules {
+    private fun Set<Int>.toStr() = sorted().joinToString("")
     override fun survives(liveNeighbors: Int) = liveNeighbors in liveNeighborsForSurvival
     override fun born(liveNeighbors: Int) = liveNeighbors in liveNeighborsForBirth
-    override fun toString() = "R ${toString(liveNeighborsForSurvival)}/${toString(liveNeighborsForBirth)}"
+    override fun toString() = "R ${liveNeighborsForSurvival.toStr()}/${liveNeighborsForBirth.toStr()}"
 }
