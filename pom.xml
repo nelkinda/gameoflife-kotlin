@@ -62,10 +62,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>13</maven.compiler.source>
         <maven.compiler.target>13</maven.compiler.target>
-        <version.cucumber>5.4.2</version.cucumber>
-        <version.junit>5.6.0</version.junit>
-        <version.pmd>6.21.0</version.pmd>
-        <kotlin.version>1.3.70</kotlin.version>
+        <version.cucumber>5.5.0</version.cucumber>
+        <version.junit>5.6.1</version.junit>
+        <version.pmd>6.22.0</version.pmd>
+        <kotlin.version>1.3.71</kotlin.version>
     </properties>
 
     <dependencies>
@@ -210,8 +210,8 @@
                 <dependencies>
                     <dependency>
                         <groupId>org.pitest</groupId>
-                        <artifactId>pitest-junit5-plugin</artifactId>
-                        <version>0.12</version>
+                        <artifactId>pitest-kotlin-plugin</artifactId>
+                        <version>0.1-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
             </plugin>
