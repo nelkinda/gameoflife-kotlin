@@ -1,10 +1,10 @@
 package com.nelkinda.training.gameoflife
 
-internal fun `parse simplified Life 1_05`(s: String): Universe {
+internal fun `parse simplified Life 1_05`(life1_05: String): Universe {
     val cells = HashSet<Cell>()
     var line = 0
     var column = 0
-    for (c in s) {
+    for (c in life1_05) {
         when (c) {
             '\n' -> {
                 line++
