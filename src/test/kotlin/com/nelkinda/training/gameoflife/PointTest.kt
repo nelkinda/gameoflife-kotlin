@@ -21,8 +21,11 @@ internal class PointTest {
         val p1 = P(0, 0)
         val p2 = P(0, 1)
         assertNotEquals(p1, p2)
-        assertNotEquals(p1.hashCode().toLong(), p2.hashCode().toLong())
+        assertNotEquals(p1.hashCode(), p2.hashCode())
     }
+
+    @Test
+    fun plus() = assertEquals(P(3, 30), P(2, 20) + P(1, 10))
 
     @Test
     fun neighbors() = assertEquals(
