@@ -20,7 +20,7 @@ repositories {
 }
 
 ext {
-    cucumberVersion = '5.7.0'
+    cucumberVersion = '6.1.0'
     hamcrestVersion = '2.2'
     junitVersion = '4.13'
     junitJupiterVersion = '5.6.2'
