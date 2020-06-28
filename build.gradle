@@ -31,7 +31,7 @@ ext {
 }
 
 dependencies {
-    checkstyle 'com.puppycrawl.tools:checkstyle:8.33'
+    checkstyle 'com.puppycrawl.tools:checkstyle:8.34'
 
     annotationProcessor "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
     compileOnly "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
