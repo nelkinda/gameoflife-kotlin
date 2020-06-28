@@ -19,5 +19,7 @@ internal class ParserTest {
     )
 
     @Test
-    fun testInvalid() = assertThrows<IllegalArgumentException> { parses("o") }
+    fun testInvalid() {
+        assertThrows<IllegalArgumentException> { parses("o") }
+    }
 }
