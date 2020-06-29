@@ -20,6 +20,7 @@ internal class ParserTest {
 
     @Test
     fun testInvalid() {
-        assertThrows<IllegalArgumentException> { parses("o") }
+        val e = assertThrows<IllegalArgumentException> { parses("o") }
+        assertEquals("Unexpected character 'o' at line 1, column 1", e.message)
     }
 }
