@@ -1,5 +1,6 @@
 package com.nelkinda.training.gameoflife
 
+@Suppress("MagicNumber")
 val ConwayRules: Rules = StandardRules(setOf(2, 3), setOf(3))
 
 interface Rules {
@@ -8,8 +9,8 @@ interface Rules {
 }
 
 internal data class StandardRules(
-        private val liveNeighborsForSurvival: Set<Int>,
-        private val liveNeighborsForBirth: Set<Int>
+    private val liveNeighborsForSurvival: Set<Int>,
+    private val liveNeighborsForBirth: Set<Int>
 ) : Rules {
     private fun Set<Int>.toStr() = sorted().joinToString("")
     override fun survives(liveNeighbors: Int) = liveNeighbors in liveNeighborsForSurvival
