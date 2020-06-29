@@ -9,7 +9,7 @@ plugins {
     id 'info.solidsoft.pitest' version '1.5.1'
     id 'name.remal.check-updates' version '1.0.198'
     id 'io.gitlab.arturbosch.detekt' version '1.10.0'
-//    id 'org.jlleitschuh.gradle.ktlint' version '9.2.1'
+    id 'org.jlleitschuh.gradle.ktlint' version '9.2.1'
 }
 
 group 'com.nelkinda.training.gameoflife'
@@ -105,9 +105,9 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     }
 }
 
-//ktlint {
-//    version.set('0.37.2')
-//}
+ktlint {
+    version.set('0.37.2')
+}
 
 pitest {
     targetClasses = ['com.nelkinda.training.gameoflife.*']
