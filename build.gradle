@@ -10,6 +10,7 @@ plugins {
     id 'name.remal.check-updates' version '1.0.203'
     id 'io.gitlab.arturbosch.detekt' version '1.10.0'
 //    id 'org.jlleitschuh.gradle.ktlint' version '9.2.1'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 }
 
 group 'com.nelkinda.training.gameoflife'
@@ -22,43 +23,63 @@ repositories {
     jcenter()
 }
 
-ext {
-    cucumberVersion = '6.2.2'
-    hamcrestVersion = '2.2'
-    junitVersion = '4.13'
-    junitJupiterVersion = '5.6.2'
-    junitPlatformVersion = '1.6.2'
-    lombokVersion = '1.18.12'
-    mockitoVersion = '3.4.0'
-    pmdVersion = '6.25.0'
+dependencyManagement {
+    dependencies {
+        dependency 'com.puppycrawl.tools:checkstyle:8.34'
+        dependencySet(group: 'io.cucumber', version: '6.2.2') {
+            entry 'cucumber-java'
+            entry 'cucumber-junit'
+            entry 'cucumber-junit-platform-engine'
+        }
+        dependency 'junit:junit:4.13'
+        dependencySet(group: 'net.sourceforge.pmd', version: '6.25.0') {
+            entry 'pmd'
+            entry 'pmd-core'
+            entry 'pmd-java'
+        }
+        dependency 'org.hamcrest:hamcrest:2.2'
+        dependencySet(group: 'org.junit.jupiter', version: '5.6.2') {
+            entry 'junit-jupiter'
+            entry 'junit-jupiter-api'
+            entry 'junit-jupiter-engine'
+            entry 'junit-jupiter-params'
+        }
+        dependencySet(group: 'org.junit.platform', version: '1.6.2') {
+            entry 'junit-platform-commons'
+            entry 'junit-platform-engine'
+        }
+        dependency 'org.junit.vintage:junit-vintage-engine:5.6.2'
+        dependency 'org.mockito:mockito-core:3.4.0'
+        dependency 'org.projectlombok:lombok:1.18.12'
+    }
 }
 
 dependencies {
-    checkstyle 'com.puppycrawl.tools:checkstyle:8.34'
+    checkstyle 'com.puppycrawl.tools:checkstyle'
 
-    annotationProcessor "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
-    compileOnly "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
+    annotationProcessor "org.projectlombok:lombok"
+    compileOnly "org.projectlombok:lombok"
 
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 
-    testAnnotationProcessor "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
-    testCompileOnly "org.projectlombok:lombok:$rootProject.ext.lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok"
+    testCompileOnly "org.projectlombok:lombok"
 
-    testImplementation "io.cucumber:cucumber-java:$rootProject.ext.cucumberVersion"
-    testImplementation "io.cucumber:cucumber-junit:$rootProject.ext.cucumberVersion"
-    testImplementation "io.cucumber:cucumber-junit-platform-engine:$rootProject.ext.cucumberVersion"
-    testImplementation "junit:junit:$rootProject.ext.junitVersion"
-    testImplementation "org.hamcrest:hamcrest:$rootProject.ext.hamcrestVersion"
-    testImplementation "org.jetbrains.kotlin:kotlin-test"
-    testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
-    testImplementation "org.junit.jupiter:junit-jupiter:$rootProject.ext.junitJupiterVersion"
-    testImplementation "org.junit.jupiter:junit-jupiter-api:$rootProject.ext.junitJupiterVersion"
-    testImplementation "org.junit.jupiter:junit-jupiter-engine:$rootProject.ext.junitJupiterVersion"
-    testImplementation "org.junit.jupiter:junit-jupiter-params:$rootProject.ext.junitJupiterVersion"
-    testImplementation "org.junit.platform:junit-platform-commons:$rootProject.ext.junitPlatformVersion"
-    testImplementation "org.junit.platform:junit-platform-engine:$rootProject.ext.junitPlatformVersion"
-    testImplementation "org.junit.vintage:junit-vintage-engine:$rootProject.ext.junitJupiterVersion"
-    testImplementation "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
+    testImplementation 'io.cucumber:cucumber-java'
+    testImplementation 'io.cucumber:cucumber-junit'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine'
+    testImplementation 'junit:junit'
+    testImplementation 'org.hamcrest:hamcrest'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params'
+    testImplementation 'org.junit.platform:junit-platform-commons'
+    testImplementation 'org.junit.platform:junit-platform-engine'
+    testImplementation 'org.junit.vintage:junit-vintage-engine'
+    testImplementation 'org.mockito:mockito-core'
 
     pitest 'org.pitest:pitest-junit5-plugin:0.12'
     pitest 'org.pitest:pitest-command-line:1.5.2'
@@ -124,9 +145,9 @@ pmd {
     ruleSets = []
     consoleOutput = true
     dependencies {
-        pmd "net.sourceforge.pmd:pmd:$rootProject.ext.pmdVersion"
-        pmd "net.sourceforge.pmd:pmd-core:$rootProject.ext.pmdVersion"
-        pmd "net.sourceforge.pmd:pmd-java:$rootProject.ext.pmdVersion"
+        pmd 'net.sourceforge.pmd:pmd'
+        pmd 'net.sourceforge.pmd:pmd-core'
+        pmd 'net.sourceforge.pmd:pmd-java'
     }
 }
 
