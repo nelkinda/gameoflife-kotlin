@@ -2,27 +2,10 @@ package com.nelkinda.training.gameoflife
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertNotEquals
 
 internal class PointTest {
     @Test
     fun testToString() = assertEquals("P(0, 1)", P(0, 1).toString())
-
-    @Test
-    fun equalPoints() {
-        val p1 = P(0, 0)
-        val p2 = P(0, 0)
-        assertEquals(p1, p2)
-        assertEquals(p1.hashCode(), p2.hashCode())
-    }
-
-    @Test
-    fun notEqualPoints() {
-        val p1 = P(0, 0)
-        val p2 = P(0, 1)
-        assertNotEquals(p1, p2)
-        assertNotEquals(p1.hashCode(), p2.hashCode())
-    }
 
     @Test
     fun plus() = assertEquals(P(3, 30), P(2, 20) + P(1, 10))
