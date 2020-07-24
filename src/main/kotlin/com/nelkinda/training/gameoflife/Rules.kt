@@ -8,7 +8,7 @@ interface Rules {
     fun born(liveNeighbors: Int): Boolean
 }
 
-internal data class StandardRules(
+data class StandardRules(
     private val liveNeighborsForSurvival: Set<Int>,
     private val liveNeighborsForBirth: Set<Int>
 ) : Rules {
