@@ -43,13 +43,13 @@ This implementation of Game of Life follows the following activities and constra
   The Parser implementation is imperative, but its interface and observable behavior are functional.
 
 ## Quality
-Note: This has been copied from [gameoflife-java](https://github.com/nelkinda/gameoflife-java) and not changed to Kotlin yet.
-Jacoco and Pitest do not work yet.
 
 ### Testing, Mutation Test Coverage
 - The acceptance tests are written using BDD in Gherkin and executed via Cucumber.
 - The unit tests are written and executed with JUnit 5.
   Regular code coverage is measured using JaCoCo which reports 100% lines and condition coverage.
+  _Pitest_ is not used for mutation testing because it currently does not work well for Kotlin.
+  For example, _Pitest_ tries to mutate Kotlin intrinsics.
 
 ### SonarQube
 - The project has a SonarQube analysis.
