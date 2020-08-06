@@ -23,4 +23,11 @@ internal class RulesTest {
             { assertSurvival(ConwayRules, setOf(2, 3)) },
             { assertBirth(ConwayRules, setOf(3)) }
     )
+
+    @Test
+    fun testHighlifeRules() = assertAll(
+            { assertEquals("R 23/36", HighlifeRules.toString()) },
+            { assertSurvival(HighlifeRules, setOf(2, 3)) },
+            { assertBirth(HighlifeRules, setOf(3, 6)) }
+    )
 }

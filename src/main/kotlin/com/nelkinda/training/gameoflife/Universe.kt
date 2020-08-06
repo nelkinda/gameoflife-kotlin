@@ -1,6 +1,6 @@
 package com.nelkinda.training.gameoflife
 
-internal typealias Cell = Point
+internal typealias Cell = Point<*>
 
 @Suppress("TooManyFunctions")
 data class Universe constructor(

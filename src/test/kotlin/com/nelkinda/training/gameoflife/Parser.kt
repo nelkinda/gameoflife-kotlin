@@ -1,5 +1,9 @@
 package com.nelkinda.training.gameoflife
 
+import com.nelkinda.training.gameoflife.life2d.Point2D
+
+internal typealias P = Point2D
+
 internal fun `parse simplified Life 1_05`(life1_05: String): Universe {
     val cells = HashSet<Cell>()
     var line = 1
