@@ -50,8 +50,6 @@ Jacoco and Pitest do not work yet.
 - The acceptance tests are written using BDD in Gherkin and executed via Cucumber.
 - The unit tests are written and executed with JUnit 5.
   Regular code coverage is measured using JaCoCo which reports 100% lines and condition coverage.
-  On top of that, _Pitest_ is used to perform mutation testing.
-  The mutation tests run by _Pitest_ report 0 surviving mutations. 
 
 ### SonarQube
 - The project has a SonarQube analysis.
@@ -59,7 +57,6 @@ Jacoco and Pitest do not work yet.
   0 bugs, 0 vulnerabilities, 0 security hotspots, 0 debt, 0 code smells, 100% coverage, 0.0% duplications, 0 duplicated blocks.
 
 ![SonarQube report](src/doc/images/GameOfLife_Sonar.png)
-![Pitest report](src/doc/images/GameOfLife_Pitest.png)
 The lack of coverage in the Pitest report is due to a coverage bug around enums.
 
 ## References
