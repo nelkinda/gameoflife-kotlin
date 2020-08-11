@@ -10,7 +10,7 @@ plugins {
     id 'name.remal.check-updates' version '1.0.209'
     id 'io.gitlab.arturbosch.detekt' version '1.10.0'
 //    id 'org.jlleitschuh.gradle.ktlint' version '9.2.1'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 }
 
 group 'com.nelkinda.training.gameoflife'
@@ -164,6 +164,6 @@ test {
 }
 
 wrapper {
-    gradleVersion '6.5.1'
+    gradleVersion '6.6'
     distributionType = Wrapper.DistributionType.ALL
 }
