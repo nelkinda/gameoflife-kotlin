@@ -5,7 +5,7 @@ internal typealias Cell = Point<*>
 @Suppress("TooManyFunctions")
 data class Universe constructor(
         private val rules: Rules = ConwayRules,
-        private val life: Set<Cell>
+        private val life: Set<Cell>,
 ) {
     operator fun inc() = Universe(rules, survivingCells() + bornCells())
 

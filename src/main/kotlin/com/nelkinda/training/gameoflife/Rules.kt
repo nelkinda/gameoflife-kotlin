@@ -13,7 +13,7 @@ interface Rules {
 
 data class StandardRules(
     private val liveNeighborsForSurvival: Set<Int>,
-    private val liveNeighborsForBirth: Set<Int>
+    private val liveNeighborsForBirth: Set<Int>,
 ) : Rules {
     private fun Set<Int>.toStr() = sorted().joinToString("")
     override fun survives(liveNeighbors: Int) = liveNeighbors in liveNeighborsForSurvival

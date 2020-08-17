@@ -15,7 +15,7 @@ internal class ParserTest {
             { parses("*", P(0, 0)) },
             { parses("**", P(0, 0), P(1, 0)) },
             { parses("*\n*", P(0, 0), P(0, 1)) },
-            { parses("*.*", P(0, 0), P(2, 0)) }
+            { parses("*.*", P(0, 0), P(2, 0)) },
     )
 
     @Test

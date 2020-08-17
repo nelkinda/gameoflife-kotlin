@@ -14,13 +14,17 @@ internal class Point2DTest {
 
     @Test
     fun neighbors() = assertEquals(
-            setOf(P(4, 49), P(4, 50), P(4, 51), P(5, 49), P(5, 51), P(6, 49), P(6, 50), P(6, 51)),
-            P(5, 50).neighbors().toSet()
+            setOf(
+                    P(4, 49), P(4, 50), P(4, 51),
+                    P(5, 49),           P(5, 51),
+                    P(6, 49), P(6, 50), P(6, 51),
+            ),
+            P(5, 50).neighbors().toSet(),
     )
 
     @Test
     fun neighborsFiltered() = assertEquals(
             setOf(P(4, 49)),
-            P(5, 50).neighbors { it == P(4, 49) }.toSet()
+            P(5, 50).neighbors { it == P(4, 49) }.toSet(),
     )
 }

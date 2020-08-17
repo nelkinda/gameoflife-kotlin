@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 
 @CucumberOptions(
         features = ["src/test/resources/features"],
-        strict = true
+        strict = true,
 )
 @RunWith(Cucumber::class)
 class RunCukesTest
