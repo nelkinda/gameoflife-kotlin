@@ -7,7 +7,7 @@ data class Universe constructor(
         private val rules: Rules = ConwayRules,
         private val life: Set<Cell>,
 ) {
-    operator fun inc() = Universe(rules, survivingCells() + bornCells())
+    operator fun inc() = copy(life = survivingCells() + bornCells())
 
     private fun survivingCells() = life.filter { it.survives() }.toSet()
     private fun bornCells() = deadNeighborsOfLivingCells().filter { it.born() }.toSet()
