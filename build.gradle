@@ -16,7 +16,7 @@ plugins {
 group 'com.nelkinda.training.gameoflife'
 version '0.0.1-SNAPSHOT'
 
-sourceCompatibility = 13
+sourceCompatibility = 14
 
 repositories {
     mavenCentral()
@@ -122,7 +122,7 @@ test.finalizedBy jacocoTestReport
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
         freeCompilerArgs = ["-Xjsr305=strict"]
-        jvmTarget = "13"
+        jvmTarget = "14"
     }
 }
 
