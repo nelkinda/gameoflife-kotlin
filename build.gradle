@@ -38,17 +38,17 @@ dependencyManagement {
             entry 'pmd-java'
         }
         dependency 'org.hamcrest:hamcrest:2.2'
-        dependencySet(group: 'org.junit.jupiter', version: '5.6.2') {
+        dependencySet(group: 'org.junit.jupiter', version: '5.7.0') {
             entry 'junit-jupiter'
             entry 'junit-jupiter-api'
             entry 'junit-jupiter-engine'
             entry 'junit-jupiter-params'
         }
-        dependencySet(group: 'org.junit.platform', version: '1.6.2') {
+        dependencySet(group: 'org.junit.platform', version: '1.7.0') {
             entry 'junit-platform-commons'
             entry 'junit-platform-engine'
         }
-        dependency 'org.junit.vintage:junit-vintage-engine:5.6.2'
+        dependency 'org.junit.vintage:junit-vintage-engine:5.7.0'
         dependency 'org.mockito:mockito-core:3.5.10'
         dependency 'org.projectlombok:lombok:1.18.12'
     }
