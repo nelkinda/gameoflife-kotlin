@@ -99,6 +99,10 @@ checkstyleTest {
     maxWarnings = 0
 }
 
+jacoco {
+    toolVersion = "0.8.6"
+}
+
 jacocoTestCoverageVerification {
     violationRules {
         rule {
