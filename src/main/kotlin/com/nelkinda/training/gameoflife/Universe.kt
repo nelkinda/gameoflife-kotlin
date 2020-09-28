@@ -3,7 +3,7 @@ package com.nelkinda.training.gameoflife
 internal typealias Cell = Point<*>
 
 @Suppress("TooManyFunctions")
-data class Universe constructor(
+data class Universe(
         private val rules: Rules = ConwayRules,
         private val life: Set<Cell>,
 ) {
