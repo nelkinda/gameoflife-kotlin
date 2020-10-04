@@ -9,7 +9,7 @@ plugins {
     id 'info.solidsoft.pitest' version '1.5.2'
     id 'name.remal.check-updates' version '1.0.211'
     id 'io.gitlab.arturbosch.detekt' version '1.14.1'
-//    id 'org.jlleitschuh.gradle.ktlint' version '9.3.0'
+    id 'org.jlleitschuh.gradle.ktlint' version '9.4.0'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 }
 
@@ -127,14 +127,15 @@ test.finalizedBy jacocoTestReport
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
-        freeCompilerArgs = ["-Xjsr305=strict"]
+        freeCompilerArgs = ["-Xjsr305=strict", "-Xjvm-default=enable"]
         jvmTarget = "14"
     }
 }
 
-//ktlint {
-//    version.set('0.37.2')
-//}
+ktlint {
+    version = '0.39.0'
+    verbose = true
+}
 
 pitest {
     targetClasses.set(['com.nelkinda.training.gameoflife.*'])

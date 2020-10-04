@@ -2,8 +2,8 @@ package com.nelkinda.training.gameoflife
 
 @Suppress("TooManyFunctions")
 data class Universe<Cell : Point<Cell>>(
-        private val rules: Rules = ConwayRules,
-        private val life: Set<Cell>,
+    private val rules: Rules = ConwayRules,
+    private val life: Set<Cell>,
 ) {
     operator fun inc() = copy(life = survivingCells() + bornCells())
 

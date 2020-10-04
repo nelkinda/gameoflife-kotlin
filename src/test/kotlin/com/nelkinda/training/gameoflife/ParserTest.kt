@@ -7,15 +7,15 @@ import kotlin.test.assertEquals
 
 internal class ParserTest {
     private fun parses(spec: String, vararg cells: P) =
-            assertEquals(Universe(life = setOf(*cells)), `parse simplified Life 1_05`(spec))
+        assertEquals(Universe(life = setOf(*cells)), `parse simplified Life 1_05`(spec))
 
     @Test
     fun testParses() = assertAll(
-            { parses("") },
-            { parses("*", P(0, 0)) },
-            { parses("**", P(0, 0), P(1, 0)) },
-            { parses("*\n*", P(0, 0), P(0, 1)) },
-            { parses("*.*", P(0, 0), P(2, 0)) },
+        { parses("") },
+        { parses("*", P(0, 0)) },
+        { parses("**", P(0, 0), P(1, 0)) },
+        { parses("*\n*", P(0, 0), P(0, 1)) },
+        { parses("*.*", P(0, 0), P(2, 0)) },
     )
 
     @Test
