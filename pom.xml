@@ -233,6 +233,10 @@
                             <goal>compile</goal>
                         </goals>
                         <configuration>
+                            <args>
+                                <arg>-Xjsr305=strict</arg>
+                                <arg>-Xjvm-default=enable</arg>
+                            </args>
                             <sourceDirs>
                                 <source>src/main/kotlin</source>
                                 <source>target/generated-sources/annotations</source>
