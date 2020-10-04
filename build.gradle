@@ -137,14 +137,14 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 //}
 
 pitest {
-    targetClasses = ['com.nelkinda.training.gameoflife.*']
-    pitestVersion = '1.5.2'
-    timestampedReports = false
-    testPlugin = 'junit5'
-    outputFormats = ['XML', 'HTML']
-    mutators = ['DEFAULTS', 'STRONGER', 'CONSTRUCTOR_CALLS', 'INLINE_CONSTS', 'REMOVE_CONDITIONALS', 'REMOVE_INCREMENTS', 'ROR']
-    mutationThreshold = 100
-    coverageThreshold = 100
+    targetClasses.set(['com.nelkinda.training.gameoflife.*'])
+    pitestVersion.set('1.5.2')
+    timestampedReports.set(false)
+    testPlugin.set('junit5')
+    outputFormats.set(['XML', 'HTML'])
+    mutators.set(['DEFAULTS', 'STRONGER', 'CONSTRUCTOR_CALLS', 'INLINE_CONSTS', 'REMOVE_CONDITIONALS', 'REMOVE_INCREMENTS', 'ROR'])
+    mutationThreshold.set(100)
+    coverageThreshold.set(100)
 }
 
 pmd {
