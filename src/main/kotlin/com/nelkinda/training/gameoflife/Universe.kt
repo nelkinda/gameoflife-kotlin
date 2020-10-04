@@ -1,9 +1,7 @@
 package com.nelkinda.training.gameoflife
 
-internal typealias Cell = Point<*>
-
 @Suppress("TooManyFunctions")
-data class Universe(
+data class Universe<Cell : Point<Cell>>(
         private val rules: Rules = ConwayRules,
         private val life: Set<Cell>,
 ) {
@@ -16,7 +14,7 @@ data class Universe(
     private fun Cell.survives() = rules.survives(countLiveNeighbors())
     private fun Cell.born() = rules.born(countLiveNeighbors())
     private fun Cell.isAlive() = this in life
-    private fun Cell.isDead() = this !in life
+    private fun Cell.isDead() = !this.isAlive()
     private fun Cell.deadNeighbors() = neighbors { it.isDead() }
     private fun Cell.liveNeighbors() = neighbors { it.isAlive() }
     private fun Cell.countLiveNeighbors() = liveNeighbors().count()

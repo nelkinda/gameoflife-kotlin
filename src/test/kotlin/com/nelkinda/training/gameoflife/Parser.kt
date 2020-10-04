@@ -4,8 +4,8 @@ import com.nelkinda.training.gameoflife.life2d.Point2D
 
 internal typealias P = Point2D
 
-internal fun `parse simplified Life 1_05`(life1_05: String): Universe {
-    val cells = HashSet<Cell>()
+internal fun `parse simplified Life 1_05`(life1_05: String): Universe<P> {
+    val cells = HashSet<P>()
     var line = 1
     var column = 1
     val syntax = mapOf(

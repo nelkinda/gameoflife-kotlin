@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then
 import kotlin.test.assertEquals
 
 class GameOfLifeSteps {
-    private lateinit var universe: Universe
+    private lateinit var universe: Universe<*>
 
     @Given("the following universe:")
     fun defineUniverse(spec: String) {

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.assertThrows
 import kotlin.test.assertEquals
 
 internal class ParserTest {
-    private fun parses(spec: String, vararg cells: Cell) =
+    private fun parses(spec: String, vararg cells: P) =
             assertEquals(Universe(life = setOf(*cells)), `parse simplified Life 1_05`(spec))
 
     @Test
