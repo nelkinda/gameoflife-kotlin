@@ -62,7 +62,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
-        <version.cucumber>6.5.1</version.cucumber>
+        <version.cucumber>6.8.0</version.cucumber>
         <version.junit>5.6.2</version.junit>
         <version.pmd>6.26.0</version.pmd>
         <kotlin.version>1.4.0</kotlin.version>
