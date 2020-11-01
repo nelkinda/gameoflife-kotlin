@@ -64,7 +64,7 @@
         <maven.compiler.target>14</maven.compiler.target>
         <version.cucumber>6.8.0</version.cucumber>
         <version.junit>5.7.0</version.junit>
-        <version.pmd>6.28.0</version.pmd>
+        <version.pmd>6.29.0</version.pmd>
         <kotlin.version>1.4.10</kotlin.version>
     </properties>
 
