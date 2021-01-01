@@ -25,7 +25,7 @@ repositories {
 
 dependencyManagement {
     dependencies {
-        dependency 'com.puppycrawl.tools:checkstyle:8.38'
+        dependency 'com.puppycrawl.tools:checkstyle:8.39'
         dependencySet(group: 'io.cucumber', version: '6.9.1') {
             entry 'cucumber-java'
             entry 'cucumber-junit'
