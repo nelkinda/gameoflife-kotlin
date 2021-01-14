@@ -4,7 +4,7 @@ plugins {
     id 'checkstyle'
     id 'pmd'
     id 'name.remal.sonarlint' version '1.1.6'
-    id 'org.sonarqube' version '3.0'
+    id 'org.sonarqube' version '3.1'
     id 'jacoco'
     id 'info.solidsoft.pitest' version '1.5.2'
     id 'name.remal.check-updates' version '1.1.6'
