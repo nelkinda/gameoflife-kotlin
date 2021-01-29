@@ -51,7 +51,7 @@ dependencyManagement {
         dependency 'org.mockito:mockito-core:3.7.7'
         dependency 'org.pitest:pitest-junit5-plugin:0.12'
         dependency 'org.pitest:pitest-command-line:1.6.2'
-        dependency 'org.projectlombok:lombok:1.18.16'
+        dependency 'org.projectlombok:lombok:1.18.18'
     }
 }
 
