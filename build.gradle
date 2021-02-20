@@ -37,17 +37,17 @@ dependencyManagement {
             entry 'pmd-java'
         }
         dependency 'org.hamcrest:hamcrest:2.2'
-        dependencySet(group: 'org.junit.jupiter', version: '5.7.0') {
+        dependencySet(group: 'org.junit.jupiter', version: '5.7.1') {
             entry 'junit-jupiter'
             entry 'junit-jupiter-api'
             entry 'junit-jupiter-engine'
             entry 'junit-jupiter-params'
         }
-        dependencySet(group: 'org.junit.platform', version: '1.7.0') {
+        dependencySet(group: 'org.junit.platform', version: '1.7.1') {
             entry 'junit-platform-commons'
             entry 'junit-platform-engine'
         }
-        dependency 'org.junit.vintage:junit-vintage-engine:5.7.0'
+        dependency 'org.junit.vintage:junit-vintage-engine:5.7.1'
         dependency 'org.mockito:mockito-core:3.7.7'
         dependency 'org.pitest:pitest-junit5-plugin:0.12'
         dependency 'org.pitest:pitest-command-line:1.6.2'
