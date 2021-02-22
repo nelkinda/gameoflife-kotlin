@@ -30,7 +30,7 @@ dependencyManagement {
             entry 'cucumber-junit'
             entry 'cucumber-junit-platform-engine'
         }
-        dependency 'junit:junit:4.13.1'
+        dependency 'junit:junit:4.13.2'
         dependencySet(group: 'net.sourceforge.pmd', version: '6.31.0') {
             entry 'pmd'
             entry 'pmd-core'
