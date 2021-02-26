@@ -65,7 +65,7 @@
         <version.cucumber>6.10.0</version.cucumber>
         <version.junit>5.7.1</version.junit>
         <version.pmd>6.31.0</version.pmd>
-        <kotlin.version>1.4.30</kotlin.version>
+        <kotlin.version>1.4.31</kotlin.version>
     </properties>
 
     <dependencies>
