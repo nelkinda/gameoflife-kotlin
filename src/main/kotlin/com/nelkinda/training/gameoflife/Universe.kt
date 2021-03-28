@@ -5,8 +5,9 @@ data class Universe<Cell : Point<Cell>>(
     private val rules: Rules = ConwayRules,
     private val life: Set<Cell>,
 ) {
-    operator fun inc() = copy(life = survivingCells() + bornCells())
+    operator fun inc() = copy(life = cellsOfNextGeneration())
 
+    private fun cellsOfNextGeneration() = survivingCells() + bornCells()
     private fun survivingCells() = life.filter { it.survives() }.toSet()
     private fun bornCells() = deadNeighborsOfLivingCells().filter { it.born() }.toSet()
     private fun deadNeighborsOfLivingCells() = life.flatMap { it.deadNeighbors() }
