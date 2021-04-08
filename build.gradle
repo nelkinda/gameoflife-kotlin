@@ -48,7 +48,7 @@ dependencyManagement {
             entry 'junit-platform-engine'
         }
         dependency 'org.junit.vintage:junit-vintage-engine:5.7.1'
-        dependency 'org.mockito:mockito-core:3.8.0'
+        dependency 'org.mockito:mockito-core:3.9.0'
         dependency 'org.pitest:pitest-junit5-plugin:0.14'
         dependency 'org.pitest:pitest-command-line:1.6.4'
         dependency 'org.projectlombok:lombok:1.18.20'
