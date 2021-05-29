@@ -118,7 +118,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 }
 
 ktlint {
-    version = '0.40.0'
+    version = '0.41.0'
     verbose = true
 }
 
