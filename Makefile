@@ -19,7 +19,7 @@ all:
 .PHONY: mutation
 ## Runs the mutation tests.
 mutation:
-	./mvn org.pitest:pitest-maven:mutationCoverage
+	./mvnw org.pitest:pitest-maven:mutationCoverage
 
 .PHONY: sonar
 ## Performs static code analysis with SonarQube.
