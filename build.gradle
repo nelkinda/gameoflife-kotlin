@@ -51,20 +51,13 @@ dependencyManagement {
         dependency 'org.mockito:mockito-core:3.8.0'
         dependency 'org.pitest:pitest-junit5-plugin:0.14'
         dependency 'org.pitest:pitest-command-line:1.6.4'
-        dependency 'org.projectlombok:lombok:1.18.20'
     }
 }
 
 dependencies {
     checkstyle 'com.puppycrawl.tools:checkstyle'
 
-    annotationProcessor "org.projectlombok:lombok"
-    compileOnly "org.projectlombok:lombok"
-
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
-
-    testAnnotationProcessor "org.projectlombok:lombok"
-    testCompileOnly "org.projectlombok:lombok"
 
     testImplementation 'io.cucumber:cucumber-java'
     testImplementation 'io.cucumber:cucumber-junit'
