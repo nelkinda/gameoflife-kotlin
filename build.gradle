@@ -48,7 +48,6 @@ dependencyManagement {
             entry 'junit-platform-engine'
         }
         dependency 'org.junit.vintage:junit-vintage-engine:5.7.1'
-        dependency 'org.mockito:mockito-core:3.8.0'
         dependency 'org.pitest:pitest-junit5-plugin:0.14'
         dependency 'org.pitest:pitest-command-line:1.6.4'
     }
@@ -73,7 +72,6 @@ dependencies {
     testImplementation 'org.junit.platform:junit-platform-commons'
     testImplementation 'org.junit.platform:junit-platform-engine'
     testImplementation 'org.junit.vintage:junit-vintage-engine'
-    testImplementation 'org.mockito:mockito-core'
 
     pitest 'org.pitest:pitest-junit5-plugin'
     pitest 'org.pitest:pitest-command-line'
