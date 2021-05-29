@@ -49,7 +49,7 @@ dependencyManagement {
         }
         dependency 'org.junit.vintage:junit-vintage-engine:5.7.2'
         dependency 'org.pitest:pitest-junit5-plugin:0.14'
-        dependency 'org.pitest:pitest-command-line:1.6.4'
+        dependency 'org.pitest:pitest-command-line:1.6.6'
     }
 }
 
@@ -125,7 +125,7 @@ ktlint {
 
 pitest {
     targetClasses.set(['com.nelkinda.training.gameoflife.*'])
-    pitestVersion.set('1.5.2')
+    pitestVersion.set('1.6.6')
     timestampedReports.set(false)
     testPlugin.set('junit5')
     outputFormats.set(['XML', 'HTML'])
