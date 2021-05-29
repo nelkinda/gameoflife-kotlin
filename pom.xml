@@ -262,7 +262,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <jvmTarget>1.8</jvmTarget>
+                    <jvmTarget>16</jvmTarget>
                     <args>
                         <arg>-Xinline-classes</arg>
                     </args>
