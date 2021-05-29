@@ -19,7 +19,6 @@ sourceCompatibility = 16
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 dependencyManagement {
