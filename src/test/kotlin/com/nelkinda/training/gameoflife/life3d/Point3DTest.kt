@@ -12,6 +12,7 @@ internal class Point3DTest {
     @Test
     fun plus() = assertEquals(P(3, 30, 300), P(2, 20, 200) + P(1, 10, 100))
 
+    @SuppressWarnings("MaxLineLength")
     @Test
     fun neighbors() = assertEquals(
         setOf(
