@@ -62,7 +62,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
-        <version.cucumber>6.10.4</version.cucumber>
+        <version.cucumber>6.11.0</version.cucumber>
         <version.junit>5.7.2</version.junit>
         <version.pmd>6.37.0</version.pmd>
         <kotlin.version>1.5.21</kotlin.version>
