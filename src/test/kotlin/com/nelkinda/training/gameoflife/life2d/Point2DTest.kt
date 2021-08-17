@@ -15,9 +15,9 @@ internal class Point2DTest {
     @Test
     fun neighbors() = assertEquals(
         setOf(
-            P(4, 49), P(4, 50), P(4, 51),
-            P(5, 49),           P(5, 51), // ktlint-disable no-multi-spaces
             P(6, 49), P(6, 50), P(6, 51),
+            P(5, 49),           P(5, 51), // ktlint-disable no-multi-spaces
+            P(4, 49), P(4, 50), P(4, 51),
         ),
         P(5, 50).neighbors().toSet(),
     )
