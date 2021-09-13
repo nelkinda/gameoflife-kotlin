@@ -36,7 +36,7 @@ dependencyManagement {
             entry 'pmd-java'
         }
         dependency 'org.hamcrest:hamcrest:2.2'
-        dependencySet(group: 'org.junit.jupiter', version: '5.7.2') {
+        dependencySet(group: 'org.junit.jupiter', version: '5.8.0') {
             entry 'junit-jupiter'
             entry 'junit-jupiter-api'
             entry 'junit-jupiter-engine'
