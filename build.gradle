@@ -23,14 +23,14 @@ repositories {
 
 dependencyManagement {
     dependencies {
-        dependency 'com.puppycrawl.tools:checkstyle:9.0'
+        dependency 'com.puppycrawl.tools:checkstyle:9.1'
         dependencySet(group: 'io.cucumber', version: '6.11.0') {
             entry 'cucumber-java'
             entry 'cucumber-junit'
             entry 'cucumber-junit-platform-engine'
         }
         dependency 'junit:junit:4.13.2'
-        dependencySet(group: 'net.sourceforge.pmd', version: '6.38.0') {
+        dependencySet(group: 'net.sourceforge.pmd', version: '6.40.0') {
             entry 'pmd'
             entry 'pmd-core'
             entry 'pmd-java'
