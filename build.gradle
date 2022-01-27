@@ -47,7 +47,7 @@ dependencyManagement {
             entry 'junit-platform-engine'
         }
         dependency 'org.junit.vintage:junit-vintage-engine:5.8.1'
-        dependency 'org.pitest:pitest-junit5-plugin:0.14'
+        dependency 'org.pitest:pitest-junit5-plugin:0.15'
         dependency 'org.pitest:pitest-command-line:1.7.3'
     }
 }
