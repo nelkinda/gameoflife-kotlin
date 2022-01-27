@@ -7,7 +7,7 @@ plugins {
     id 'org.sonarqube' version '3.3'
     id 'jacoco'
     id 'info.solidsoft.pitest' version '1.6.0'
-    id 'io.gitlab.arturbosch.detekt' version '1.18.1'
+    id 'io.gitlab.arturbosch.detekt' version '1.19.0'
     id 'org.jlleitschuh.gradle.ktlint' version '10.2.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
@@ -24,13 +24,13 @@ repositories {
 dependencyManagement {
     dependencies {
         dependency 'com.puppycrawl.tools:checkstyle:9.1'
-        dependencySet(group: 'io.cucumber', version: '6.11.0') {
+        dependencySet(group: 'io.cucumber', version: '7.2.3') {
             entry 'cucumber-java'
             entry 'cucumber-junit'
             entry 'cucumber-junit-platform-engine'
         }
         dependency 'junit:junit:4.13.2'
-        dependencySet(group: 'net.sourceforge.pmd', version: '6.38.0') {
+        dependencySet(group: 'net.sourceforge.pmd', version: '6.40.0') {
             entry 'pmd'
             entry 'pmd-core'
             entry 'pmd-java'
@@ -47,7 +47,7 @@ dependencyManagement {
             entry 'junit-platform-engine'
         }
         dependency 'org.junit.vintage:junit-vintage-engine:5.8.1'
-        dependency 'org.pitest:pitest-junit5-plugin:0.14'
+        dependency 'org.pitest:pitest-junit5-plugin:0.15'
         dependency 'org.pitest:pitest-command-line:1.7.3'
     }
 }
