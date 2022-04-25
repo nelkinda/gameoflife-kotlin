@@ -23,7 +23,7 @@ repositories {
 
 dependencyManagement {
     dependencies {
-        dependency 'com.puppycrawl.tools:checkstyle:10.0'
+        dependency 'com.puppycrawl.tools:checkstyle:10.2'
         dependencySet(group: 'io.cucumber', version: '7.2.3') {
             entry 'cucumber-java'
             entry 'cucumber-junit-platform-engine'
