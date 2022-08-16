@@ -63,8 +63,8 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
         <version.cucumber>7.2.3</version.cucumber>
-        <version.junit>5.8.2</version.junit>
-        <version.junit-platform>1.8.2</version.junit-platform>
+        <version.junit>5.9.0</version.junit>
+        <version.junit-platform>1.9.0</version.junit-platform>
         <version.pmd>6.43.0</version.pmd>
         <kotlin.version>1.6.10</kotlin.version>
     </properties>
@@ -116,7 +116,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version>
+                <version>0.8.8</version>
                 <executions>
                     <execution>
                         <goals>

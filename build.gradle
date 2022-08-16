@@ -34,13 +34,13 @@ dependencyManagement {
             entry 'pmd-java'
         }
         dependency 'org.hamcrest:hamcrest:2.2'
-        dependencySet(group: 'org.junit.jupiter', version: '5.8.2') {
+        dependencySet(group: 'org.junit.jupiter', version: '5.9.0') {
             entry 'junit-jupiter'
             entry 'junit-jupiter-api'
             entry 'junit-jupiter-engine'
             entry 'junit-jupiter-params'
         }
-        dependencySet(group: 'org.junit.platform', version: '1.8.2') {
+        dependencySet(group: 'org.junit.platform', version: '1.9.0') {
             entry 'junit-platform-commons'
             entry 'junit-platform-engine'
             entry 'junit-platform-launcher'
