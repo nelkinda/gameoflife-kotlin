@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
     id 'checkstyle'
     id 'pmd'
     id 'name.remal.sonarlint' version '1.5.0'
@@ -15,7 +15,7 @@ plugins {
 group 'com.nelkinda.training.gameoflife'
 version '0.0.1-SNAPSHOT'
 
-sourceCompatibility = 16
+sourceCompatibility = 18
 
 repositories {
     mavenCentral()
@@ -48,7 +48,7 @@ dependencyManagement {
             entry 'junit-platform-suite-commons'
             entry 'junit-platform-suite-engine'
         }
-        dependency 'org.pitest:pitest-junit5-plugin:0.15'
+        dependency 'org.pitest:pitest-junit5-plugin:1.0.0'
         dependency 'org.pitest:pitest-command-line:1.7.4'
     }
 }
@@ -89,7 +89,7 @@ checkstyleTest {
 }
 
 jacoco {
-    toolVersion = "0.8.7"
+    toolVersion = "0.8.8"
 }
 
 jacocoTestCoverageVerification {
@@ -115,7 +115,7 @@ test.finalizedBy jacocoTestReport
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
         freeCompilerArgs = ["-Xjsr305=strict", "-Xjvm-default=enable"]
-        jvmTarget = "16"
+        jvmTarget = "18"
     }
 }
 
@@ -158,6 +158,6 @@ test {
 }
 
 wrapper {
-    gradleVersion '7.4'
+    gradleVersion '7.5.1'
     distributionType = Wrapper.DistributionType.ALL
 }
