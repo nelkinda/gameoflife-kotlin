@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
     id 'checkstyle'
     id 'pmd'
     id 'name.remal.sonarlint' version '1.5.0'
@@ -15,7 +15,7 @@ plugins {
 group 'com.nelkinda.training.gameoflife'
 version '0.0.1-SNAPSHOT'
 
-sourceCompatibility = 16
+sourceCompatibility = 18
 
 repositories {
     mavenCentral()
@@ -115,7 +115,7 @@ test.finalizedBy jacocoTestReport
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
         freeCompilerArgs = ["-Xjsr305=strict", "-Xjvm-default=enable"]
-        jvmTarget = "16"
+        jvmTarget = "18"
     }
 }
 
