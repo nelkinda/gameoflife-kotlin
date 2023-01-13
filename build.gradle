@@ -48,7 +48,7 @@ dependencyManagement {
             entry 'junit-platform-suite-commons'
             entry 'junit-platform-suite-engine'
         }
-        dependency 'org.pitest:pitest-junit5-plugin:0.15'
+        dependency 'org.pitest:pitest-junit5-plugin:1.1.2'
         dependency 'org.pitest:pitest-command-line:1.7.4'
     }
 }
