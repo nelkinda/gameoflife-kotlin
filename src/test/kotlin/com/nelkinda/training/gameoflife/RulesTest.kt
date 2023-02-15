@@ -8,13 +8,13 @@ internal class RulesTest {
     private fun assertSurvival(rules: Rules, liveNeighbors: Set<Int>) = assertAll(
         (0..8).map {
             { assertEquals(it in liveNeighbors, rules.survives(it)) }
-        }
+        },
     )
 
     private fun assertBirth(rules: Rules, liveNeighbors: Set<Int>) = assertAll(
         (0..8).map {
             { assertEquals(it in liveNeighbors, rules.born(it)) }
-        }
+        },
     )
 
     @Test
