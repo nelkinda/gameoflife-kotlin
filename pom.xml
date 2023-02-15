@@ -55,18 +55,18 @@
     </issueManagement>
 
     <prerequisites>
-        <maven>3.6.3</maven>
+        <maven>3.9.0</maven>
     </prerequisites>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-        <version.cucumber>7.6.0</version.cucumber>
-        <version.junit>5.9.0</version.junit>
-        <version.junit-platform>1.9.0</version.junit-platform>
-        <version.pmd>6.48.0</version.pmd>
-        <kotlin.version>1.7.10</kotlin.version>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <version.cucumber>7.11.1</version.cucumber>
+        <version.junit>5.9.2</version.junit>
+        <version.junit-platform>1.9.2</version.junit-platform>
+        <version.pmd>6.54.0</version.pmd>
+        <kotlin.version>1.8.0</kotlin.version>
     </properties>
 
     <dependencies>
@@ -201,13 +201,18 @@
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
-                <version>1.7.4</version>
+                <version>1.11.0</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.pitest</groupId>
+                        <artifactId>pitest-junit5-plugin</artifactId>
+                        <version>1.1.2</version>
+                    </dependency>
+                    <!--dependency>
+                        <groupId>org.pitest</groupId>
                         <artifactId>pitest-kotlin-plugin</artifactId>
                         <version>0.1-SNAPSHOT</version>
-                    </dependency>
+                    </dependency-->
                 </dependencies>
             </plugin>
             <plugin>
